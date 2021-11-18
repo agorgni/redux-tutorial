@@ -1,17 +1,17 @@
 const initialState = {
-    names: [],
+    contacts: [],
     selectedContact: null,
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_NAME': {
+        case 'ADD_CONTACT': {
             return {
                 ...state,
-                names: [...state.names, action.payload],
+                contacts: [...state.contacts, action.payload],
             }
         }
-        case 'GET_DETAILS': {
+        case 'GET_CONTACT': {
             return {
                 ...state,
                 selectedContact: action.payload,
@@ -20,7 +20,7 @@ const reducer = (state = initialState, action) => {
         case 'DELETE_CONTACT': {
             return {
                 ...state,
-                names: state.names.filter(name => name.id !== action.payload),
+                contacts: state.contacts.filter(name => name.id !== action.payload),
                 selectedContact: null,
             };
         }

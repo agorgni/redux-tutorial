@@ -1,13 +1,13 @@
-export const addName = contact => {
+export const addContact = contact => {
     return {
-        type: 'ADD_NAME',
+        type: 'ADD_CONTACT',
         payload: contact,
     }
 };
 
-export const getDetails = contact => {
+export const getContact = contact => {
     return {
-        type: 'GET_DETAILS',
+        type: 'GET_CONTACT',
         payload: contact,
     }
 };

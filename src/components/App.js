@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 
 import Details from './Details';
-import { addName, getDetails } from '../actions';
+import { addContact, getContact } from '../actions';
 import './styles.css'
 
 function App(props) {
@@ -15,7 +15,7 @@ function App(props) {
                 name,
                 email,
             }
-            props.addName(contact);
+            props.addContact(contact);
         }
     };
 
@@ -29,11 +29,11 @@ function App(props) {
                         </tr>
                     </thead>
                     <tbody>
-                        {props.names.map((name, index) => {
+                        {props.contacts.map((contact, index) => {
                             return (
                                 <tr key={index}>
-                                    <td className="row" onClick={() => props.getDetails(name)}>
-                                        {name.name}
+                                    <td onClick={() => props.getContact(contact)}>
+                                        {contact.name}
                                     </td>
                                 </tr>
                             );
@@ -51,14 +51,14 @@ function App(props) {
 
 const mapStateToProps = state => {
     return {
-        names: state.names,
+        contacts: state.contacts,
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        addName: name => dispatch(addName(name)),
-        getDetails: contact => dispatch(getDetails(contact)),
+        addContact: contact => dispatch(addContact(contact)),
+        getContact: contact => dispatch(getContact(contact)),
     }
 }
 
