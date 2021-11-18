@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    text-align: center;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    margin-left: 10px;
+    flex: 1;
+}
+
+.title {
+    margin: 20px;
+}
+
+.list {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th {
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+table td {
+    padding: 20px;
+}
+
+table td:nth-child(even) {
+    background-color: rgb(209, 208, 208);
+}
+
+button {
+    padding: 20px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
